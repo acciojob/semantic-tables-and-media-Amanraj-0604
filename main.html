@@ -1,16 +1,72 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Semantic Table + Media List</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <!-- Semantic table with thead, tbody, tfoot (tfoot optional here) -->
+  <table border="1" cellpadding="8" width="60%">
+    <thead>
+      <tr>
+        <th scope="col">Roll numbers</th>
+        <th scope="col">Names</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Aman</td>
+      </tr>
+
+      <tr>
+        <th scope="row">2</th>
+        <td>Ravi</td>
+      </tr>
+
+      <tr>
+        <th scope="row">3</th>
+        <td>Priya</td>
+      </tr>
+    </tbody>
+
+    <!-- optional footer row -->
+    <tfoot>
+      <tr>
+        <td colspan="2" style="text-align:right; font-style:italic;">Total students: 3</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Heading required between the table and the ordered list -->
+  <h2>List of medias</h2>
+
+  <!-- Ordered list with exactly 3 items in the specified order -->
+  <ol>
+    <!-- 1) Image with alt attribute -->
+    <li>
+      <img src="https://picsum.photos/id/123/200/300" alt="Random sample image (id 123)" />
+    </li>
+
+    <!-- 2) Video: uses <video> with a <source> element (same URL as requested) -->
+    <li>
+      <video controls width="320" height="180">
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+        Your browser does not support the video element.
+      </video>
+    </li>
+
+    <!-- 3) Audio: uses <audio> with a <source> element -->
+    <li>
+      <audio controls>
+        <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+    </li>
+  </ol>
 
 </body>
-
 </html>
